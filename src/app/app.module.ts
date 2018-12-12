@@ -14,6 +14,7 @@ import { HeroSearchComponent } from './hero-search/hero-search.component';
 import { HttpClientModule }    from '@angular/common/http'; // 好像是專門處理执行 HTTP 请求的方法
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService }  from './in-memory-data.service';
+import { HeaderComponent } from './header/header.component';
 
 
 
@@ -24,7 +25,8 @@ import { InMemoryDataService }  from './in-memory-data.service';
     HeroDetailComponent,
     MessagesComponent,
     HellobzComponent,
-    HeroSearchComponent
+    HeroSearchComponent,
+    HeaderComponent
   ],
   imports: [ // 匯入的 Module(angular自己寫的沒有 View的 Module) 在這裡 导入 BrowserModule 以获取浏览器特有的服务，比如 DOM 渲染、无害化处理和位置
     BrowserModule,
