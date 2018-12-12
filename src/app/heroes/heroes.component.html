@@ -1,0 +1,17 @@
+<div>
+  
+  <ul class="heroes">
+    <li *ngFor="let hero of heroes">
+      <a routerLink="/detail/{{hero.id}}">
+        <span class="badge">{{hero.id}}</span> {{hero.name}}
+      </a>
+      <button class="delete" title="delete hero"
+      (click)="delete(hero)">刪除</button>
+    </li>
+    <!--中括號class.selected 表示selected這個樣式要在後面的˙判斷為True的時候套用是上來-->
+  </ul>
+  <!--*ngFor 就是一個迴圈
+  不要忘了 ngFor 前面的星号（*），它是该语法中的关键部分。let hero of heroes 代表 從 heroes 陣列中撈出 hero 排列
+  (click)="onSelect(hero)" 事件綁定方法是用小瓜號包住，參數hero則是 該LI自己在for迴圈得到的 Obj--> 
+</div>
+

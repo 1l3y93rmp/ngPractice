@@ -1,0 +1,16 @@
+<div id="search-component">
+    <h4>Hero Search</h4>
+   
+    <input #searchBox id="search-box" (keyup)="search(searchBox.value)" />
+   
+    <ul class="search-result">
+      <!--heroes$ 是一个 Observable-->
+      <!--*ngFor 不能直接使用 Observable裡面去找東西 但是可以用 | 後面加上async 表示使用AsyncPipe (非同步取值 也就是非同步自動解析之後更新 https://angular.cn/api/common/AsyncPipe) -->
+      <!--這樣的好處是不用在 Ctrler中訂閱Observable在傳遞了 這邊AsyncPipe自己訂閱-->
+      <li *ngFor="let hero of heroes$ | async" >
+        <a routerLink="/detail/{{hero.id}}">
+          {{hero.name}}
+        </a>
+      </li>
+    </ul>
+  </div>
