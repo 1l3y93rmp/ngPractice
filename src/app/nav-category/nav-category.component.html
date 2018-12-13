@@ -1,0 +1,16 @@
+
+<ul>
+  <li *ngFor="let node of category_Data.MCategories">
+    <a href="{{node.MCategory.CateUrl}}" title="node.MCategory.CateName">
+      {{node.MCategory.CateName}}
+    </a>
+    <ul>
+      <li *ngFor="let Snode of node.SCategories">
+        <a href="{{Snode.SCategory.CateUrl}}}" title="Snode.SCategory.CateName}">
+          {{Snode.SCategory.CateName}}
+        </a>
+      </li>
+    </ul>
+  </li>
+</ul>
+

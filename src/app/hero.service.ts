@@ -68,7 +68,8 @@ export class HeroService {
 
     // 下面是使用較為真實的API 並加上catchError
     const url = `${this.heroesUrl}/${id}`;
-    return this.http.get<Hero>(url).pipe(
+    return this.http.get<Hero>(url)
+    .pipe(
       tap(_ => this.log(`fetched hero id=${id}`)),
       catchError(this.handleError<Hero>(`getHero id=${id}`))
     );

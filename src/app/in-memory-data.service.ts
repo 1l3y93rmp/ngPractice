@@ -3,6 +3,19 @@ import { Hero } from './hero';
 // 這也是一個假的API 可以用get post 取得
 // 這裡也有提供修改的方法
 
+// 這個假的服務 有9種已經配置好的行為分別是
+// request()
+// delete()
+// get()
+// head()
+// jsonp()
+// options()
+// patch()
+// post()
+// put()
+// 這些方法在 Service的組件中可以使用 https://angular.cn/api/common/http/HttpClient#%E6%96%B9%E6%B3%95
+
+
 export class InMemoryDataService implements InMemoryDbService {
   createDb() {
     const heroes = [
@@ -99,7 +112,7 @@ export class InMemoryDataService implements InMemoryDbService {
       }
     ];
     
-    const Second_nav = {
+    const Second_nav_TRPlus = {
       LCategories: [
         {
           LCategory: {
@@ -10242,6 +10255,7 @@ export class InMemoryDataService implements InMemoryDbService {
                 Image: 'https://cdn.trplus.com.tw/medias/sys_master/advimage/advimage/h4a/he2/9087243059230/9087243059230.jpg',
                 Queue: 1,
                 Link: 'https://www.trplus.com.tw/TR_Lighting/c/EC_10001099'
+
               }
             ],
             CateUrl: '/TR_Lighting/c/EC_10000008',
@@ -13137,7 +13151,7 @@ export class InMemoryDataService implements InMemoryDbService {
       resultHashCode: 1096169330
     }
     
-    return {heroes, First_nav, Second_nav};
+    return {heroes, First_nav, Second_nav_TRPlus};
   }
 
   // Overrides the genId method to ensure that a hero always has an id.
