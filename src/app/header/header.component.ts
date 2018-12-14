@@ -49,10 +49,9 @@ export class HeaderComponent implements OnInit {
     // 如果兩者都有什麼都不用做
   }
 
-  mouseEnterNav(i) : void {
-    console.log(i)
-    this.chackLocalStorage_save();
-    this.category_Data = this.Second_navData_TRPlus['LCategories'][i];
+  mouseEnterNav(i) : void { // 當游標懸停的時候的動作
+    this.chackLocalStorage_save(); // 檢查資料還在否 沒有的話存一下
+    this.category_Data = this.Second_navData_TRPlus['LCategories'][i]; // 把資料傳下去
   }
 
   ngOnInit() {

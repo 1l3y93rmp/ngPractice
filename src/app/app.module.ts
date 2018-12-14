@@ -20,7 +20,9 @@ import { NavCategoryComponent } from './nav-category/nav-category.component';
 
 
 @NgModule({ // 這也是一個裝飾器
-  declarations: [ //该应用所拥有的组件 依賴的模塊寫這裡 (這裡都是有View的)(網站裡面所有的都要寫在這喔
+  declarations: [
+    //该应用所拥有的组件 依賴的模塊寫這裡 (這裡都是有View的)(網站裡面所有的都要寫在這喔
+    // 有寫在這裡才能被html 的TMP或是 Router調用
     AppComponent,
     HeroesComponent,
     HeroDetailComponent,

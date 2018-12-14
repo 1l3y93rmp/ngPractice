@@ -1,16 +1,33 @@
 
-<ul>
-  <li *ngFor="let node of category_Data.MCategories">
-    <a href="{{node.MCategory.CateUrl}}" title="node.MCategory.CateName">
-      {{node.MCategory.CateName}}
-    </a>
-    <ul>
-      <li *ngFor="let Snode of node.SCategories">
-        <a href="{{Snode.SCategory.CateUrl}}}" title="Snode.SCategory.CateName}">
-          {{Snode.SCategory.CateName}}
-        </a>
-      </li>
-    </ul>
-  </li>
-</ul>
+<div class="menu__xl">
+  <ul class="menu__lg">
+    <li *ngFor="let node of category_Data.MCategories; let i = index" (mouseenter) ="mouseEnterNav(i)" [class.active]="index===i">
+      <a href="{{node.MCategory.CateUrl}}" title="node.MCategory.CateName">
+        {{node.MCategory.CateName}}
+      </a>
+    </li>
+  </ul>
+  <ul class="menu__md" *ngIf="category_s_Data">
+    <li *ngFor="let Snode of category_s_Data.SCategories">
+      <a href="{{Snode.SCategory.CateUrl}}" title="{{Snode.SCategory.CateName}}">
+        {{Snode.SCategory.CateName}}
+      </a>
+    </li>
+  </ul>
+  <div class="menu__ad">
+      <a href="{{category_Data.LCategory.CateAdvText[0].Link}}" class="menu__event event" target="_blank" titlt="undefined">
+        <img src="{{category_Data.LCategory.CateAdvImg[0].Image}}" class="event_photo" alt="{{category_Data.LCategory.CateAdvText[0].H1Heading}}">        
+        <div class="event__info">
+          <div class="event__title"></div>
+          <div class="event__date"></div>
+        </div>
+      </a>
+      <a href="{{category_Data.LCategory.CateAdvText[0].Link}}" class="menu__promo promo" title="{{category_Data.LCategory.CateAdvText[0].H1Heading}}">
+        <div class="promo__title">{{category_Data.LCategory.CateAdvText[0].H1Heading}}</div>
+        <div class="promo__sub-title">{{category_Data.LCategory.CateAdvText[0].H2Heading}}</div>
+        <div class="promo__price"></div>
+        <div class="promo__btn">SHOP NOW <i class="fa fa-angle-right"></i></div>
+      </a>
+  </div>
+</div>
 
