@@ -15,6 +15,7 @@ export class HeaderComponent implements OnInit {
   Second_navData_TRPlus: {}; // 這筆資料不經過格式檢查 只規定是Obj
 
   category_Data: Array<any>; // 每一分類資料
+  index : number;
 
 
   getFirst_navData(): void { 
@@ -51,7 +52,13 @@ export class HeaderComponent implements OnInit {
 
   mouseEnterNav(i) : void { // 當游標懸停的時候的動作
     this.chackLocalStorage_save(); // 檢查資料還在否 沒有的話存一下
+    this.index = i ;
     this.category_Data = this.Second_navData_TRPlus['LCategories'][i]; // 把資料傳下去
+  }
+
+  mouseLeaveNav() : void {
+    this.index = null ;
+    this.category_Data = undefined;
   }
 
   ngOnInit() {

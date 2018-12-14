@@ -1,16 +1,18 @@
-<ul class="menu">
-    <li *ngFor="let node of First_navData; let i = index"  (mouseenter) ="mouseEnterNav(i)">
-        <a
-          href="{{node.CateUrl}}"
-          class="menu__TRPlusLcate"
-          [attr.cateid]="node.CateID"
-          [attr.storeid]="TRPlus"
-          title="{{node.CateName}}"
-        >
-          <span>
-            {{node.CateName}}
-          </span>
-        </a>
-    </li>
-</ul>
-<app-nav-category *ngIf="category_Data" [category_Data]="category_Data"></app-nav-category>
+<div (mouseleave)="mouseLeaveNav()">
+  <ul class="menu">
+      <li *ngFor="let node of First_navData; let i = index"  (mouseenter) ="mouseEnterNav(i)" [class.active]="index === i">
+          <a
+            href="{{node.CateUrl}}"
+            class="menu__TRPlusLcate"
+            [attr.cateid]="node.CateID"
+            [attr.storeid]="TRPlus"
+            title="{{node.CateName}}"
+          >
+            <span>
+              {{node.CateName}}
+            </span>
+          </a>
+      </li>
+  </ul>
+  <app-nav-category *ngIf="category_Data" [category_Data]="category_Data"></app-nav-category>
+</div>
