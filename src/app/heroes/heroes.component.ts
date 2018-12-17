@@ -5,7 +5,7 @@ import { Hero } from '../hero';
 
 import { HeroService } from '../hero.service'; // 資料的服務模塊
 
-@Component({ //裝飾器
+@Component({ // 裝飾器
   selector: 'app-heroes', // 如果這個Class 被Call 他在html裡面是這樣寫: <app-heroes>
   templateUrl: './heroes.component.html',
   styleUrls: ['./heroes.component.sass'] // 該模塊私有的
@@ -18,12 +18,16 @@ export class HeroesComponent implements OnInit {
   }
 
   // 新增一個State 叫做 hero
-  hero : Hero = { // 這裡指的是我們在設定靜態值必須要依照class Hero的方式 (這個State 暫時沒有再用了)
+  hero: Hero = { // 這裡指的是我們在設定靜態值必須要依照class Hero的方式 (這個State 暫時沒有再用了)
     id: 1,
     name: 'Windstorm'
   };
-  getHeroes(): void { 
-    //這其實是一個Get資料的動作 只是我們又把這件事情用模組包起來了
+
+
+  // heroes = HEROES; // 英雄列表
+  heroes: Hero[]; // 新增一個State 是陣列 英雄列表
+  getHeroes(): void {
+    // 這其實是一個Get資料的動作 只是我們又把這件事情用模組包起來了
     // this.heroes = this.heroService.getHeroes();
 
     // 為了模擬異步所以用了rxjs Observable
@@ -31,10 +35,6 @@ export class HeroesComponent implements OnInit {
     this.heroService.getHeroes()
         .subscribe(heroes => this.heroes = heroes);
   }
-
-
-  // heroes = HEROES; // 英雄列表
-  heroes: Hero[]; // 新增一個State 是陣列 英雄列表
 
   // selectedHero: Hero; // 新增一個State 叫做 selectedHero，是\必須參照'../hero'這個格式表
 
@@ -51,7 +51,6 @@ export class HeroesComponent implements OnInit {
     // 不過讀取更新的工作這個模塊要自己做
     // heroService.delete() 之後會返回 Observable 所以這樣會自動更新
   }
-  
   ngOnInit() { // 子模塊的生命週期: 初始化邏輯
     this.getHeroes(); // 第26行定義的方法
   }

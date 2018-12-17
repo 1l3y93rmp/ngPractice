@@ -1,4 +1,4 @@
-//mock 假資料
+// mock 假資料
 // 這裡也調用了./hero 這個文件 (被用來制定Clsss中的"擺放方式與值的類型)
 import { Hero } from './hero';
 

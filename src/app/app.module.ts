@@ -6,14 +6,14 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeroesComponent } from './heroes/heroes.component';
-import { FormsModule } from '@angular/forms';// <-- NgModel lives here 真可憐 只好全域import NgModel 之下的模塊
+import { FormsModule } from '@angular/forms'; // <-- NgModel lives here 真可憐 只好全域import NgModel 之下的模塊
 import { HeroDetailComponent } from './hero-detail/hero-detail.component';
 import { MessagesComponent } from './messages/messages.component';
-import { HellobzComponent } from './hellobz/hellobz.component'
+import { HellobzComponent } from './hellobz/hellobz.component';
 import { HeroSearchComponent } from './hero-search/hero-search.component';
-import { HttpClientModule }    from '@angular/common/http'; // 好像是專門處理执行 HTTP 请求的方法
+import { HttpClientModule } from '@angular/common/http'; // 好像是專門處理执行 HTTP 请求的方法
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
-import { InMemoryDataService }  from './in-memory-data.service';
+import { InMemoryDataService } from './in-memory-data.service';
 import { HeaderComponent } from './header/header.component';
 import { NavCategoryComponent } from './nav-category/nav-category.component';
 
@@ -21,7 +21,7 @@ import { NavCategoryComponent } from './nav-category/nav-category.component';
 
 @NgModule({ // 這也是一個裝飾器
   declarations: [
-    //该应用所拥有的组件 依賴的模塊寫這裡 (這裡都是有View的)(網站裡面所有的都要寫在這喔
+    // 该应用所拥有的组件 依賴的模塊寫這裡 (這裡都是有View的)(網站裡面所有的都要寫在這喔
     // 有寫在這裡才能被html 的TMP或是 Router調用
     AppComponent,
     HeroesComponent,

@@ -111,7 +111,6 @@ export class InMemoryDataService implements InMemoryDbService {
         CateName: '休閒'
       }
     ];
-    
     const Second_nav_TRPlus = {
       LCategories: [
         {
@@ -1021,7 +1020,7 @@ export class InMemoryDataService implements InMemoryDbService {
                 {
                   SCategory: {
                     isMainChannelCategory: false,
-                    CateUrl: '/rootCategory/%E7%89%B9%E5%8A%9B%2B/%E5%9C%8B%E9%9A%9B%E5%90%8D%E5%93%81/LA-Z-BOY/%E4%BC%91%E9%96%92%E6%A4%85%E4%B8%A8%E5%85%A8%E7%89%9B%E7%9A%AE/c/EC_10001235',
+                    CateUrl: '/rootCategory/%E7%89%B9%E5%8A%9B%2B',
                     CateID: 'EC_10001235',
                     CateName: '休閒椅丨全牛皮'
                   }
@@ -4231,7 +4230,7 @@ export class InMemoryDataService implements InMemoryDbService {
                 {
                   SCategory: {
                     isMainChannelCategory: true,
-                    CateUrl: '/rootCategory/%E7%89%B9%E5%8A%9B%2B/%E5%AF%A2%E5%85%B7%E5%82%A2%E9%A3%BE/%E5%85%92%E7%AB%A5%E5%AF%A2%E5%85%B7/%E5%85%92%E7%AB%A5%E6%B6%BC%E8%A2%AB/c/EC_10001056',
+                    CateUrl: '/rootCategory/%E7%89%B9%E5%8A%9B%2B',
                     CateID: 'EC_10001056',
                     CateName: '兒童涼被'
                   }
@@ -10778,7 +10777,7 @@ export class InMemoryDataService implements InMemoryDbService {
               ],
               MCategory: {
                 isMainChannelCategory: true,
-                CateUrl: '/rootCategory/%E7%89%B9%E5%8A%9B%2B/%E7%87%88%E5%85%B7/%E6%84%9F%E6%87%89%E7%87%88%E4%B8%A8%E5%B0%8F%E5%A4%9C%E7%87%88/c/EC_10034021',
+                CateUrl: '/rootCategory',
                 CateID: 'EC_10034021',
                 CateName: '感應燈丨小夜燈'
               }
@@ -13149,8 +13148,8 @@ export class InMemoryDataService implements InMemoryDbService {
         }
       ],
       resultHashCode: 1096169330
-    }
-    
+    };
+
     return {heroes, First_nav, Second_nav_TRPlus};
   }
 

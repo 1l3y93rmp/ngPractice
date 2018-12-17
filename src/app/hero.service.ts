@@ -1,4 +1,4 @@
-//這一個模塊主要是負責取得資料並 提共資料給 負責呈現的Componter 的工作
+// 這一個模塊主要是負責取得資料並 提共資料給 負責呈現的Componter 的工作
 import { Injectable } from '@angular/core';
 import { Hero } from './hero'; // 資料標準格式
 import { HEROES } from './mock-heroes'; // 實際假資料來源(靜態黨)
@@ -19,29 +19,29 @@ export class HeroService {
     private http: HttpClient,
     private messageService: MessageService,
     ) {}
+  private heroesUrl = 'api/heroes'; // ...這是一個比較真的假資料
 
   private log(message: string) {
     this.messageService.add(`HeroService: ${message}`);
   }
-  private heroesUrl = 'api/heroes'; // ...這是一個比較真的假資料
 
   private handleError<T> (operation = 'operation', result?: T) { // 出錯了的處理方法
     return (error: any): Observable<T> => {
-   
+
       // TODO: send the error to remote logging infrastructure
       console.error(error); // log to console instead
-   
+
       // TODO: better job of transforming error for user consumption
       this.log(`${operation} failed: ${error.message}`);
-   
+
       // Let the app keep running by returning an empty result.
       return of(result as T);
     };
   }
 
   // getHeroes(): Hero[] {
-  //是一個Get資料的動作 
-  //這裡應該會是一個異步操作(這邊還是假的所以是同步)
+  // 是一個Get資料的動作
+  // 這裡應該會是一個異步操作(這邊還是假的所以是同步)
   // return HEROES;
   // }
 
@@ -74,8 +74,8 @@ export class HeroService {
       catchError(this.handleError<Hero>(`getHero id=${id}`))
     );
   }
-  addHero (hero: Hero): Observable<Hero> { // 新增資料給 API修改 用"Post"
-    return this.http.post<Hero>(this.heroesUrl, hero, httpOptions).pipe(
+  addHero (newhero: Hero): Observable<Hero> { // 新增資料給 API修改 用"Post"
+    return this.http.post<Hero>(this.heroesUrl, newhero, httpOptions).pipe(
       tap((hero: Hero) => this.log(`added hero w/ id=${hero.id}`)),
       catchError(this.handleError<Hero>('addHero'))
     );
@@ -92,7 +92,6 @@ export class HeroService {
   deleteHero (hero: Hero | number): Observable<Hero> {
     const id = typeof hero === 'number' ? hero : hero.id;
     const url = `${this.heroesUrl}/${id}`;
-  
     return this.http.delete<Hero>(url, httpOptions).pipe(
       tap(_ => this.log(`deleted hero id=${id}`)),
       catchError(this.handleError<Hero>('deleteHero'))

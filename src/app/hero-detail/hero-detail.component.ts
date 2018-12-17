@@ -4,10 +4,10 @@ import { Hero } from '../hero';
 // 這個文件單純的表示了靜態的值在Clsss中的"擺放方式與值的類型"
 
 // 这个组件所做的只是通过 hero 属性接收一个英雄对象，并显示它。
-import { HeroService }  from '../hero.service'; // 要自己取得資料不要再依靠父輩傳遞囉
+import { HeroService } from '../hero.service'; // 要自己取得資料不要再依靠父輩傳遞囉
 
-import { ActivatedRoute } from '@angular/router'; 
-import { Location } from '@angular/common'; //location 是一个 Angular 的服务，用来与浏览器打交道。(?)
+import { ActivatedRoute } from '@angular/router';
+import { Location } from '@angular/common'; // location 是一个 Angular 的服务，用来与浏览器打交道。(?)
 
 @Component({
   selector: 'app-hero-detail', // 如果這個Class 被Call 他在html裡面是這樣寫: <app-hero-detail>
@@ -21,7 +21,7 @@ export class HeroDetailComponent implements OnInit {
     private heroService: HeroService,
     private location: Location
   ) { }
-  
+
 
 
   @Input() hero: Hero; // 這裡就是從父輩傳入的資料了 傳入hero 格式採用 Hero(../hero) 註:這是單向的
@@ -42,7 +42,7 @@ export class HeroDetailComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.getHero(); //取得資料
+    this.getHero(); // 取得資料
   }
 
 }
