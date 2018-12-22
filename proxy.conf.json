@@ -1,0 +1,38 @@
+{
+    "/category/*": {
+      "target": "https://uatwww.trplus.com.tw",
+      "changeOrigin": true,
+      "secure": false
+    },
+    "/cart/*": {
+      "target": "https://uatwww.trplus.com.tw",
+      "changeOrigin": true,
+      "secure": false
+    },
+    "/checkout/*": {
+      "target": "https://uatwww.trplus.com.tw",
+      "changeOrigin": true,
+      "secure": false
+    },
+    "/search/*": {
+      "target": "https://uatwww.trplus.com.tw",
+      "changeOrigin": true,
+      "secure": false
+    },
+    "/marketing/*": {
+      "target": "https://uatwww.trplus.com.tw",
+      "changeOrigin": true,
+      "secure": false
+    },
+    "/my-account/*": {
+      "target": "https://uatwww.trplus.com.tw",
+      "changeOrigin": true,
+      "secure": false
+    },
+    "/people": {
+      "target": "http://localhost:3000",
+      "changeOrigin": true,
+      "secure": false
+    }
+
+}

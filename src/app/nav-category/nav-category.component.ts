@@ -8,11 +8,11 @@ import { Component, OnInit, Input, AfterContentChecked} from '@angular/core';
 })
 export class NavCategoryComponent implements OnInit, AfterContentChecked { // 引用到的生命週期 要寫在這邊
 
-@Input() category_Data: {};
+@Input() category_Data;
   constructor() { }
 
   category_s_Data: Array<any>; // 每一分類再下一層資料
-  index: Number = 0;
+  index = 0;
 
   mouseEnterNav(i): void { // 當游標懸停的時候的動作
     console.log(this.category_Data['MCategories'][i]);

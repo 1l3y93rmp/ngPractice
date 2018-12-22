@@ -22,6 +22,7 @@ export class TrNavService {
   ) { }
   private First_navUrl = 'api/First_nav'; // ...這是一個比較真的假資料
   private Second_navUrl_TRPlus = 'api/Second_nav_TRPlus';
+  private localhosturl = '/people'; // 另外起的一個 MockAPI 位置
 
   private handleError<T> (operation = 'operation', result?: T) { // 出錯了的處理方法
     return (error: any): Observable<T> => {
@@ -31,7 +32,11 @@ export class TrNavService {
       return of(result as T);
     };
   }
-
+  getAll(): Observable<any> {
+    return this.http.get(this.localhosturl).pipe(
+      catchError(this.handleError('get 測試的一堆資料', []))
+    );
+  }
 
   getFirst_nav(): Observable<FirstNavClass[]> { // 取得資料
     return this.http.get<FirstNavClass[]>(this.First_navUrl)

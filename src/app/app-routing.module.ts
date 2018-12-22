@@ -6,7 +6,7 @@ import { HeroDetailComponent } from './hero-detail/hero-detail.component';
 import { HeaderComponent } from './header/header.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/hellobz', pathMatch: 'full' }, // 這裡可以寫預設路由要指到哪裡，會自動轉跳
+  // { path: '', redirectTo: '/hellobz', pathMatch: 'full' }, // 這裡可以寫預設路由要指到哪裡，會自動轉跳
   { path: 'heroes', component: HeroesComponent },
   { path: 'hellobz', component: HellobzComponent },
   { path: 'detail/:id', component: HeroDetailComponent },

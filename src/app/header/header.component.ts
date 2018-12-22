@@ -16,6 +16,7 @@ export class HeaderComponent implements OnInit {
 
   category_Data: Array<any>; // 每一分類資料
   index: number;
+  AAA: Array<any>; // 來自prot 3000 的資料
 
 
   getFirst_navData(): void {
@@ -24,6 +25,8 @@ export class HeaderComponent implements OnInit {
     // Observable會在抓到資料完成的時候才通知調用它的地方
     this.trNavService.getFirst_nav()
         .subscribe(First_navData => this.First_navData = First_navData);
+    this.trNavService.getAll()
+      .subscribe(AAA => this.AAA = AAA);
   }
 
   getSecond_navData_TRPlus(): void { // 取得 getSecond_navData_TRPlus 存在Stage
@@ -32,6 +35,7 @@ export class HeaderComponent implements OnInit {
           this.Second_navData_TRPlus = Second_navData_TRPlus;
           this.LocalStorage_save(); // 取完順便存進去
         });
+
   }
 
   LocalStorage_save(): void { // 儲存 getSecond_navData_TRPlus 的動作

@@ -1,4 +1,5 @@
 <div (mouseleave)="mouseLeaveNav()">
+  {{AAA}}
   <ul class="menu">
       <li *ngFor="let node of First_navData; let i = index"  (mouseenter) ="mouseEnterNav(i)" [class.active]="index === i">
           <a
