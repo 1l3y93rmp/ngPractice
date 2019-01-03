@@ -1,17 +1,19 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <h1>{{title}}</h1>
 <p>
-  這個畫面沒有什麼資料，要點下面的連結更換路由過去歐!<br />
   這些文字& link則會是固定出現的!
+  要有http的轉跳 使用href <br />
+  用 routerLink 是虛擬的NG component 轉跳<br />
+  記得虛擬的NG component 可以接受Serve不存在的頁面，自行組成<br />
+  但是 href的轉跳 會出404
 <p>
 <nav>
   <a href="/">什麼也沒有(/) 這邊應該是回到localhost:9002 路由</a>
   <a href="/teat1">teat1 html文字應要呈現</a>
   <a href="/teat2">teat2 html文字應要有所改變</a>
-  <a href="www.kajitsu.com.tw">teat2 https://www.kajitsu.com.tw/</a>
-  <a routerLink="/heroes">Heroes</a>
-  <a routerLink="/hellobz">hellobz</a>
-  <a routerLink="/header">header</a>
+  <a href="//www.kajitsu.com.tw">teat2 https://www.kajitsu.com.tw/</a>
+  <a href="teat1/detail/11">Heroes</a>
+  <a routerLink="teat2/child">child</a>
 </nav>
 <router-outlet></router-outlet>
 <app-messages></app-messages>
