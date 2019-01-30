@@ -1,8 +1,6 @@
 
 
-# 自己練習::: ㄏ哈哈哈哈AngularTourOfHeroes
-自己練習
-自己練習
+# AngularTourOfHeroes
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.1.2.
 
 ## Development server
