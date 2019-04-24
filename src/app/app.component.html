@@ -8,12 +8,12 @@
   但是 href的轉跳 會出404
 <p>
 <nav>
-  <a href="/">什麼也沒有(/) 這邊應該是回到localhost:9002 路由</a>
-  <a href="/teat1">teat1 html文字應要呈現</a>
-  <a href="/teat2">teat2 html文字應要有所改變</a>
-  <a href="//www.kajitsu.com.tw">teat2 https://www.kajitsu.com.tw/</a>
-  <a href="teat1/detail/11">Heroes</a>
-  <a routerLink="teat2/child">child</a>
+  <a href="/">什麼也沒有(/) 這邊應該是回到localhost:4200 路由</a>
+  <a href="/teat1">teat1 呈現 Heroes Component</a>
+  <a href="/teat2">teat2 呈現 Header Component</a>
+  <a href="//www.kajitsu.com.tw">一個外連網址</a>
+  <a href="teat1/detail/11">呈現 HeroDetailComponent 的 深層路由</a>
+  <a routerLink="teat2/child">呈現 child 這個模塊(註:此模塊被獨立幫斗)</a>
 </nav>
 <router-outlet></router-outlet>
 <app-messages></app-messages>

@@ -19,8 +19,11 @@ const routes: Routes = [
   { path: 'teat1/detail/:id', component: HeroDetailComponent },
   // 詳細說明的Component, path 中的冒号（:）表示 :id 是一个占位符，它表示某个特定英雄的 id (深層路由)
   { path: 'teat2', component: HeaderComponent },
-  { path: 'teat2/child', loadChildren: './child/child.module#ChildModule' } // loadChildren lazy loading module 直接指定路徑於此表示這不會被幫斗在 Main JS 內
+  { path: 'teat2/child', loadChildren: './child/child.module#ChildModule' }
+  // loadChildren lazy loading module 直接指定路徑於此表示這不會被幫斗在 Main JS 內，若 Main JS 可協助減肥 (import 方式等於加入  Main JS)
 ];
+
+
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)], // 始化路由器
